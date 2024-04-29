@@ -67,8 +67,6 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     @Transactional(rollbackFor=Exception.class)
     public void publishMessage(CustomerBankDto customerBankDto) {
-        System.out.println( exchange);
-        System.out.println( routingkey);
         amqpTemplate.convertAndSend(exchange, routingkey, customerBankDto);
     }   
 }
