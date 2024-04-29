@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "604f852b-2293-427d-9c42-62dc77ef54f5",
+		"name": "Danamon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31821281"
+	},
+	"item": [
+		{
+			"name": "List Bank",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/api/v1/banks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"api",
+						"v1",
+						"banks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get customers by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/api/v1/customers/f8c3de3d-1fea-4d7c-a8b0-29f63c4c3457",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"api",
+						"v1",
+						"customers",
+						"f8c3de3d-1fea-4d7c-a8b0-29f63c4c3457"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List categories transaction",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9002/transactions/api/v1/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"transactions",
+						"api",
+						"v1",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noRekeningSrc\": \"19329129999\",\n    \"noRekeningDst\": \"19329100000\",\n    \"amount\": \"100\",\n    \"categoryId\": \"f8c3de3d-1fea-4d7c-a8b0-29f63c4c3454\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9002/transactions/api/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9002",
+					"path": [
+						"transactions",
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customber by norek",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9001/users/api/v1/customers/norek/19329129999",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"api",
+						"v1",
+						"customers",
+						"norek",
+						"19329129999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patch customerBank",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"noRekening\": \"19329129999\",\n    \"balance\": \"10000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/users/api/v1/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"users",
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List loggings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9003/loggings/api/v1/loggings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"loggings",
+						"api",
+						"v1",
+						"loggings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post loggings",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service\": \"customer\",\n    \"log\": \"wkwkwkwkwkwkwkwkk\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9003/loggings/api/v1/loggings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9003",
+					"path": [
+						"loggings",
+						"api",
+						"v1",
+						"loggings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
